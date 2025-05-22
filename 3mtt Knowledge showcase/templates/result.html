@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header"><img src="{{ url_for('static', filename='logo.jpeg') }}" alt="3MTT Logo" class="logo">
+            <h4>Prediction Result</h4></div>
+        
+        <h2> <p class="{{ 'diabetic' if prediction == 1 else 'not-diabetic' }}">{{ result_text }}</p></h2>
+       <button><a href="/">Go Back</a></button> 
+       <h2>JIMOH ABDULTAWWAB AYINDE</h2>
+        <h3>Fellow ID: FE/23/28425503
+            <h4>Cohort 3</h4>
+        </h3>
+    </div>
+    
+</body>
+</html>

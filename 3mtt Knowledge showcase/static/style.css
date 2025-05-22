@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #16dd58;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    
+}
+h3,h4{
+    text-align: right;
+    
+}
+label{
+    display: inline-flex;
+    width: 200px;
+    margin-right: 0px;
+}
+input{
+    width: 180px;
+}
+.container {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
+    
+    gap :35px;
+    align-items: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #222;
+}
+.header h4 {
+    margin: 0;
+    font-size: 24px;
+    color: #222;
+}
+.logo {
+    width: 160px;
+    
+    
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    
+}
+button{
+    background-color: #16dd58;
+}
+.diabetic {
+    color: red;
+    font-weight: bold;
+}
+.not-diabetic {
+    color: green;
+    font-weight: bold;
+}
