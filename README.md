@@ -29,10 +29,10 @@ This is a machine learning web app that predicts whether a person is diabetic or
 
 
 
-**Fellow ID: FE/23/28425503
+##Fellow ID: FE/23/28425503
 
-**Name: Abdultawwab Jimoh Ayinde
+##Name: Abdultawwab Jimoh Ayinde
 
-**Mentor: MIiss Hannah Igboke (Darey.io instructor)
+##Mentor: MIiss Hannah Igboke (Darey.io instructor)
 
-** Cohort: 3
+## Cohort: 3
