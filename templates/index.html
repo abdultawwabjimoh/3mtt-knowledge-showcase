@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction - 3MTT</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="3MTT Logo" class="logo">
+            <h2 class="hed">Diabetes Prediction AI</h2>
+        </div>
+
+       
+        
+        <form method="POST" action="/predict">
+            <label>Pregnancies</label><input type="number" name="Pregnancies" placeholder="Pregnancies" required><br><br>
+            <label>Glucose</label><input type="number" name="Glucose" placeholder="Glucose" required><br><br>
+           <label>BloodPressure</label> <input type="number" name="BloodPressure" placeholder="Blood Pressure" required><br><br>
+            <label>SkinThickness</label><input type="number" name="SkinThickness" placeholder="Skin Thickness" required><br><br>
+            <label>Insulin</label><input type="number" name="Insulin" placeholder="Insulin" required><br><br>
+            <label>BMI</label><input type="number" name="BMI" placeholder="BMI" step="0.1" required><br><br>
+            <label>DiabetesPedigreeFunction</label><input type="number" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" step="0.01" required><br><br>
+            <label>Age</label><input type="number" name="Age" placeholder="Age" required><br><br>
+            <input type="submit" value="Predict">
+        </form>
+        <h2>JIMOH ABDULTAWWAB AYINDE</h2>
+        <h3>Fellow ID: FE/23/28425503
+            <h4>Cohort 3</h4>
+        </h3>
+    </div>
+    <script>
+        // Move focus to next input on Enter
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach((input, index) => {
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); // prevent form submit on enter
+                    const nextInput = inputs[index + 1];
+                    if (nextInput) {
+                        nextInput.focus();
+                    } else {
+                        // if last input, focus the submit button
+                        document.querySelector('button[type="submit"]').focus();
+                    }
+                }
+            });
+        });
+
+        // Form validation on submit
+        document.querySelector('form').addEventListener('submit', function (e) {
+            let valid = true;
+            inputs.forEach((input) => {
+                if (!input.value) {
+                    valid = false;
+                    input.style.border = '2px solid red';
+                } else {
+                    input.style.border = '';
+                }
+            });
+            if (!valid) {
+                e.preventDefault();
+                alert('Please fill in all fields before predicting.');
+            }
+        });
+    </script>
+</body>
+</html>
